@@ -1,0 +1,83 @@
+@mixin menu {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+.top {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  .button {
+    margin-right: 1rem;
+  }
+}
+
+.main {
+  display: flex;
+  width: 100%;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+
+    .menu-l1 {
+      @include menu;
+      width: calc(100% - 1rem);
+      padding-left: 1rem;
+      background-color: darkgray;
+    }
+    .menu-l2 {
+      @include menu;
+      width: calc(100% - 2rem);
+      padding-left: 2rem;
+      background-color: lightgray;
+    }
+    .menu-l3 {
+      @include menu;
+      width: calc(100% - 3rem);
+      padding-left: 3rem;
+      background-color: #eee;
+    }
+  }
+  .center {
+    width: 80%;
+
+    div.smokeview {
+      width: 100%;
+      min-height: 35rem;
+      text-align: center;
+    }
+
+    .text-xb {
+      width: 50rem;
+      height: 10rem;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+
+    .menu-l1 {
+      @include menu;
+      width: calc(100% - 1rem);
+      padding-left: 1rem;
+      background-color: darkgray;
+    }
+    .menu-l2 {
+      @include menu;
+      width: calc(100% - 2rem);
+      padding-left: 2rem;
+      background-color: lightgray;
+    }
+    .menu-l3 {
+      @include menu;
+      width: calc(100% - 3rem);
+      padding-left: 3rem;
+      background-color: #eee;
+    }
+  }
+}

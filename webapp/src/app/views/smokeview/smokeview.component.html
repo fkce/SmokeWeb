@@ -1,0 +1,53 @@
+<div class="top">
+    <p class="button"><button mat-raised-button>Unload all</button></p>
+    <p class="button"><button (click)="resetCamera()" mat-raised-button>Reset camera</button></p>
+</div>
+
+<div class="main">
+
+    <div class="left">
+        <tree [tree]="tree"></tree>
+
+
+        <!--
+        <p matRipple class="menu-l1"><mat-icon>folder_open</mat-icon> root-folder</p>
+        <p matRipple class="menu-l2"><mat-icon>folder</mat-icon> simulation1</p>
+        <p matRipple class="menu-l2"><mat-icon>folder</mat-icon> simulation2</p>
+        <p matRipple class="menu-l2"><mat-icon>folder_open</mat-icon> simulation3</p>
+        <p matRipple class="menu-l3"><mat-icon>share</mat-icon> simulation3.smv</p>
+        <p matRipple class="menu-l3"><mat-icon>share</mat-icon> simulation3_hrr.csv</p>
+        <p matRipple class="menu-l3"><mat-icon>share</mat-icon> simulation3_devc.csv</p>
+        <p matRipple class="menu-l2"><mat-icon>folder</mat-icon> simulation4</p>
+        <p matRipple class="menu-l1"><mat-icon>folder</mat-icon> other-folder</p>
+        <p matRipple class="menu-l1"><mat-icon>folder</mat-icon> finished simulations</p>
+        -->
+    </div>
+
+    <div class="center">
+        <div class="smokeview" #smokeview></div>
+        <div style="text-align: center">
+            <p>
+                Put some XB strings in new lines and click Update button. Those xbs we will get from server side using
+                requests
+                and current version of smokeview or we will parse *.fds input file.<br />
+                We will also request for other data: slice, particles, ... and display it in our canvas.
+            </p>
+            <textarea class="text-xb" [(ngModel)]="textXb">
+            </textarea><br />
+            <p><button (click)="updateView()" mat-raised-button>Update</button></p>
+        </div>
+    </div>
+
+    <div class="right">
+        <p matRipple class="menu-l1"><mat-icon>expand_more</mat-icon>Load/Unload</p>
+        <p matRipple class="menu-l2"><mat-icon>expand_more</mat-icon>3D smoke</p>
+        <p matRipple class="menu-l3"><mat-icon>arrow_right</mat-icon>SOOT DENSITY</p>
+        <p matRipple class="menu-l3"><mat-icon>arrow_right</mat-icon>HRRPUV</p>
+        <p matRipple class="menu-l2"><mat-icon>chevron_right</mat-icon>Slice</p>
+        <p matRipple class="menu-l2"><mat-icon>chevron_right</mat-icon>Particles</p>
+        <p matRipple class="menu-l1"><mat-icon>chevron_right</mat-icon>Show/Hide</p>
+        <p matRipple class="menu-l1"><mat-icon>chevron_right</mat-icon>Options</p>
+        <p matRipple class="menu-l1"><mat-icon>chevron_right</mat-icon>Dialogs</p>
+    </div>
+
+</div>
