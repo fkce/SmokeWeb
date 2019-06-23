@@ -3,7 +3,7 @@
  
 <div class="tree" #tree>
   <!-- First level -->
-  <div *ngFor="let level1 of simpleTree.children">
+  <div *ngFor="let level1 of simpleTree['children']">
     
     <p class="menu-l1" *ngIf="level1.type == 'directory'" (click)="setLevel1(level1.name)"><mat-icon *ngIf="l1!=level1.name">folder</mat-icon><mat-icon *ngIf="l1==level1.name">folder_open</mat-icon>{{level1.name}}</p>
     <p class="menu-l1" *ngIf="level1.type == 'file'">{{level1.name}}</p>

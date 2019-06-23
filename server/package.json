@@ -7,11 +7,14 @@
     "cors": "^2.8.5",
     "directory-tree": "^2.2.3",
     "express": "^4.17.0",
-    "nodemon": "^1.19.0"
+    "fkill-cli": "^5.2.0",
+    "nodemon": "^1.19.0",
+    "rimraf": "^2.6.3"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf public/*",
+    "run-server": "fkill -s :3000 && sleep 2 && node app.js &"
   },
   "author": "",
   "license": "ISC"
