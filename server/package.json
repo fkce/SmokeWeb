@@ -1,6 +1,6 @@
 {
-  "name": "smokeweb",
-  "version": "1.0.0",
+  "name": "smokeweb-server",
+  "version": "0.0.1",
   "description": "Web-browser smokeview version",
   "main": "index.js",
   "dependencies": {
