@@ -1,4 +1,5 @@
 <div class="top">
+    <p class="left">SmokeWeb</p>
     <p class="button"><button mat-raised-button>Unload all</button></p>
     <p class="button"><button (click)="resetCamera()" mat-raised-button>Reset camera</button></p>
 </div>
@@ -7,24 +8,11 @@
 
     <div class="left">
         <tree [tree]="tree"></tree>
-
-
-        <!--
-        <p matRipple class="menu-l1"><mat-icon>folder_open</mat-icon> root-folder</p>
-        <p matRipple class="menu-l2"><mat-icon>folder</mat-icon> simulation1</p>
-        <p matRipple class="menu-l2"><mat-icon>folder</mat-icon> simulation2</p>
-        <p matRipple class="menu-l2"><mat-icon>folder_open</mat-icon> simulation3</p>
-        <p matRipple class="menu-l3"><mat-icon>share</mat-icon> simulation3.smv</p>
-        <p matRipple class="menu-l3"><mat-icon>share</mat-icon> simulation3_hrr.csv</p>
-        <p matRipple class="menu-l3"><mat-icon>share</mat-icon> simulation3_devc.csv</p>
-        <p matRipple class="menu-l2"><mat-icon>folder</mat-icon> simulation4</p>
-        <p matRipple class="menu-l1"><mat-icon>folder</mat-icon> other-folder</p>
-        <p matRipple class="menu-l1"><mat-icon>folder</mat-icon> finished simulations</p>
-        -->
     </div>
 
     <div class="center">
         <div class="smokeview" #smokeview></div>
+        <!--
         <div style="text-align: center">
             <p>
                 Put some XB strings in new lines and click Update button. Those xbs we will get from server side using
@@ -36,6 +24,7 @@
             </textarea><br />
             <p><button (click)="updateView()" mat-raised-button>Update</button></p>
         </div>
+        -->
     </div>
 
     <div class="right">

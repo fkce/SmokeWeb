@@ -8,9 +8,15 @@
 .top {
   display: flex;
   justify-content: right;
+  align-items: center;
   width: 100%;
   .button {
     margin-right: 1rem;
+  }
+  .left {
+    display: flex;
+    flex-grow: 1;
+    margin-left: 1rem;
   }
 }
 

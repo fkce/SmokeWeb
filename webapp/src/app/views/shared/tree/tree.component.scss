@@ -13,6 +13,7 @@ $close-curve: ease-in;
 
 .open {
   display: flex;
+  flex-direction: column;
   //max-height: 10rem;
   //transition: max-height $open-time $open-curve;
   p {

@@ -57,6 +57,18 @@ export class SmokeviewComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    // Get directories structure from server
+    this.httpManager.get('http://cloud.fkce.pl:3000/getDirectories').then(
+      (result: Result) => {
+        this.tree = result.data;
+      },
+      (error) => {
+        if (isDevMode()) console.log(error);
+    });
+
+
+    // To remove
     this.textXb = "0.2,5.0, 0.2,0.4, 0.0,3.0\n0.2,0.4, 0.4,5.0, 0.0,3.0\n5.0,5.2, 0.2,5.0, 0.0,3.0"
 
   }
@@ -103,14 +115,6 @@ export class SmokeviewComponent implements OnInit {
     this.controls.target.set(boundingBox.geometry.boundingSphere.center.x, boundingBox.geometry.boundingSphere.center.y, boundingBox.geometry.boundingSphere.center.z)
     this.controls.update();
 
-    this.httpManager.get('http://cloud.fkce.pl:3000/test').then(
-      (result: Result) => {
-        this.tree = result.data;
-      },
-      (error) => {
-        if (isDevMode()) console.log(error);
-
-    });
   }
 
   /**
