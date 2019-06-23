@@ -2,7 +2,7 @@
   "name": "smokeweb",
   "version": "0.0.1",
   "scripts": {
-    "install": "sudo apt install -qy npm && sudo npm install @angular/cli -g && npm --prefix ./webapp install ./webapp && npm --prefix ./server install ./server",
+    "install": "sudo npm install @angular/cli -g && npm --prefix ./webapp install ./webapp && npm --prefix ./server install ./server",
 	"build-server": "npm --prefix ./webapp run-script build-prod && npm --prefix ./server run-script clean && cp -r ./webapp/dist/webapp/* ./server/public/ && npm --prefix ./server run-script run-server"
   },
   "private": true,
