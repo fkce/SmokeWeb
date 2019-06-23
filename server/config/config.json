@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "config_id": "dev",
+        "node_port": 3000
+    },
+    "prod": {
+        "config_id": "prod",
+        "node_port": 8080
+    }
+}
