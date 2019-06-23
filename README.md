@@ -1,7 +1,7 @@
 # SmokeWeb
 Web version of Smokeview
 
-## Instaltion
+## Installtion
 
 1. Clone or checkout repository to your local server.
 2. Go into smokeweb directory.
