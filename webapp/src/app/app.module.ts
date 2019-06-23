@@ -15,12 +15,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SmokeviewComponent } from './views/smokeview/smokeview.component';
 import { TreeComponent } from './views/shared/tree/tree.component';
+import { MenuComponent } from './views/shared/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SmokeviewComponent,
-    TreeComponent
+    TreeComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

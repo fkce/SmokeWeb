@@ -13,7 +13,6 @@ export class TreeComponent implements OnChanges, OnInit {
   @ViewChild('tree') private treeContainer: ElementRef;
   @Input() tree: any;
 
-  hidden: boolean = true;
   l1: string = '';
   l2: string = '';
   l3: string = '';

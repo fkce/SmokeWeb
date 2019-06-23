@@ -1,0 +1,69 @@
+<div>
+
+  <!-- First level -->
+  <div>
+    <p matRipple class="menu-l1" (click)="setLevel1('Load/Unload')">
+      <mat-icon *ngIf="l1!='Load/Unload'">chevron_right</mat-icon>
+      <mat-icon *ngIf="l1=='Load/Unload'">expand_more</mat-icon>Load/Unload
+    </p>
+
+    <!-- Second level -->
+    <div [ngClass]="l1=='Load/Unload' ? 'open' : 'close'">
+      <p matRipple class="menu-l2" (click)="setLevel2('3D smoke')">
+        <mat-icon *ngIf="l2!='3D smoke'">chevron_right</mat-icon>
+        <mat-icon *ngIf="l2=='3D smoke'">expand_more</mat-icon>3D smoke
+      </p>
+
+      <!-- Third level -->
+      <div [ngClass]="l2=='3D smoke' ? 'open' : 'close'">
+        <p matRipple class="menu-l3">
+          <mat-icon>bubble_chart</mat-icon>SOOT DENSITY
+        </p>
+        <p matRipple class="menu-l3">
+          <mat-icon>bubble_chart</mat-icon>HRRPUV
+        </p>
+      </div>
+    </div>
+    
+    <!-- Second level -->
+    <div [ngClass]="l1=='Load/Unload' ? 'open' : 'close'">
+      <p matRipple class="menu-l2">
+        <mat-icon *ngIf="l2!='Slice'">chevron_right</mat-icon>
+        <mat-icon *ngIf="l2=='Slice'">expand_more</mat-icon>Slice
+      </p>
+    </div>
+
+    <!-- Second level -->
+    <div [ngClass]="l1=='Load/Unload' ? 'open' : 'close'">
+      <p matRipple class="menu-l2">
+        <mat-icon *ngIf="l2!='Particles'">chevron_right</mat-icon>
+        <mat-icon *ngIf="l2=='Particles'">expand_more</mat-icon>Particles
+      </p>
+    </div>
+  </div>
+
+  <!-- First level -->
+  <div>
+    <p matRipple class="menu-l1" (click)="setLevel1('Show/Hide')">
+      <mat-icon *ngIf="l1!='Show/Hide'">chevron_right</mat-icon>
+      <mat-icon *ngIf="l1=='Show/Hide'">expand_more</mat-icon>Show/Hide
+    </p>
+  </div>
+
+  <!-- First level -->
+  <div>
+    <p matRipple class="menu-l1" (click)="setLevel1('Options')">
+      <mat-icon *ngIf="l1!='Options'">chevron_right</mat-icon>
+      <mat-icon *ngIf="l1=='Options'">expand_more</mat-icon>Options
+    </p>
+  </div>
+
+  <!-- First level -->
+  <div>
+    <p matRipple class="menu-l1" (click)="setLevel1('Dialogs')">
+      <mat-icon *ngIf="l1!='Dialogs'">chevron_right</mat-icon>
+      <mat-icon *ngIf="l1=='Dialogs'">expand_more</mat-icon>Dialogs
+    </p>
+  </div>
+
+</div>
