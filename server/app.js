@@ -1,23 +1,24 @@
-const express = require('express');
-const path = require('path');
-const cors = require('cors');
-const app = express();
-const port = 3000;
+const express = require('express')
+const path = require('path')
+const cors = require('cors')
+const app = express()
+const port = 3000
 
-// environment variables
-process.env.NODE_ENV = 'development';
-
-// config variables
-const config = require('./config/config.js');
+const https = require('https');
+const fs = require('fs');
 
 // Allow cors for development purpose
-app.use(cors());
+app.use(cors())
 
-require('./routes/routes')(app);
+require('./routes/routes')(app)
 
 // Get index.html 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')))
 
-app.listen(port, () => { 
-	console.log(`Smokeweb listening on port ${port}!`);
-});
+const options = {
+  key: fs.readFileSync('/home/mimooh/privkey.pem'),
+  cert: fs.readFileSync('/home/mimooh/fullchain.pem')
+};
+
+var httpsServer = https.createServer(options, app)
+httpsServer.listen(port)

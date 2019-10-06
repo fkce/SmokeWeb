@@ -1,21 +1,17 @@
 {
-  "name": "smokeweb-server",
-  "version": "0.0.1",
+  "name": "smokeweb",
+  "version": "1.0.0",
   "description": "Web-browser smokeview version",
   "main": "index.js",
   "dependencies": {
     "cors": "^2.8.5",
     "directory-tree": "^2.2.3",
     "express": "^4.17.0",
-    "fkill-cli": "^5.2.0",
-    "glob": "^7.1.4",
-    "nodemon": "^1.19.0",
-    "rimraf": "^2.6.3"
+    "nodemon": "^1.19.0"
   },
   "devDependencies": {},
   "scripts": {
-    "clean": "rimraf public/*",
-    "run-server": "fkill -s :3000 && sleep 2 && node app.js &"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
