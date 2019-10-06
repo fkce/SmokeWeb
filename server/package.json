@@ -8,6 +8,7 @@
     "directory-tree": "^2.2.3",
     "express": "^4.17.0",
     "fkill-cli": "^5.2.0",
+    "glob": "^7.1.4",
     "nodemon": "^1.19.0",
     "rimraf": "^2.6.3"
   },

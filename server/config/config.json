@@ -1,10 +1,11 @@
 {
     "dev": {
-        "config_id": "dev",
-        "node_port": 3000
+        "configId": "dev",
+        "nodePort": 3000,
+		"resultsPath": "/home/mimooh/temp-sim"
     },
     "prod": {
-        "config_id": "prod",
-        "node_port": 8080
+        "configId": "prod",
+        "nodePort": 8080
     }
 }
